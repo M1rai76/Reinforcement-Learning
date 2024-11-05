@@ -1,7 +1,3 @@
-Here’s a comprehensive `README.md` file template for your Reinforcement Learning project with Q-learning and SARSA using teacher advice. This template can be customized to fit any additional details or changes in your project.
-
----
-
 # Reinforcement Learning with Teacher Advice: Q-learning and SARSA
 
 This project explores reinforcement learning techniques, specifically **Q-learning** and **SARSA** algorithms, enhanced with **teacher advice**. The agent is trained in a grid-based environment where a teacher provides guidance with varying levels of availability and accuracy. The goal is to evaluate how teacher advice impacts the agent’s performance in terms of reward, success rate, and learning speed.
