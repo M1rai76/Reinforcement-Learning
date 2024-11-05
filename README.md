@@ -1,129 +1,192 @@
-# Reinforcement Learning with Teacher Advice
+Here’s a comprehensive `README.md` file template for your Reinforcement Learning project with Q-learning and SARSA using teacher advice. This template can be customized to fit any additional details or changes in your project.
 
-This project explores reinforcement learning algorithms, focusing on Q-learning and SARSA, and evaluates the impact of teacher advice on the agent’s performance. We implement and analyze agent behavior in a custom environment, utilizing different configurations of teacher availability and accuracy to guide the learning process.
+---
+
+# Reinforcement Learning with Teacher Advice: Q-learning and SARSA
+
+This project explores reinforcement learning techniques, specifically **Q-learning** and **SARSA** algorithms, enhanced with **teacher advice**. The agent is trained in a grid-based environment where a teacher provides guidance with varying levels of availability and accuracy. The goal is to evaluate how teacher advice impacts the agent’s performance in terms of reward, success rate, and learning speed.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Features](#features)
+- [Project Overview](#project-overview)
+- [Environment](#environment)
+- [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Experiments](#experiments)
+  - [Tasks Breakdown](#tasks-breakdown)
+  - [Running the Code](#running-the-code)
+  - [Parameters](#parameters)
 - [Results](#results)
-- [Contributing](#contributing)
 - [License](#license)
 
-## Introduction
+---
 
-Reinforcement learning (RL) enables an agent to learn optimal behavior through interactions with an environment. This project extends traditional Q-learning and SARSA algorithms by incorporating teacher advice. The teacher provides guidance with varying levels of availability and accuracy, helping the agent make more informed decisions during the learning phase.
+## Project Overview
 
-## Features
+In this project, reinforcement learning agents are trained using Q-learning and SARSA algorithms in a grid-based environment. Each task incrementally builds on the complexity, culminating with the use of teacher advice to evaluate its effect on the agent’s learning. The project is split into five tasks:
 
-- **Q-learning and SARSA implementation:** Core RL algorithms for learning optimal policies.
-- **Teacher advice mechanism:** Configurable teacher guidance based on availability and accuracy.
-- **Performance comparison:** Evaluate agent performance with and without teacher advice using key metrics like average reward, success rate, and learning speed.
-- **Heatmaps and comparative plots:** Visualize the effect of teacher guidance on agent learning.
+1. **Task 1**: Basic Q-learning without teacher advice.
+2. **Task 2**: Basic SARSA without teacher advice.
+3. **Task 3**: Q-learning with teacher advice.
+4. **Task 4**: SARSA with teacher advice.
+5. **Task 5**: Comparison of agent performance (trained with teacher advice) against baseline agents.
 
-## Installation
+### Key Features
 
-1. **Clone the repository:**
+- **Dynamic Environment**: A grid-based environment where the agent navigates to reach a goal.
+- **Teacher Advice**: An enhancement allowing the agent to receive guidance with configurable levels of **availability** and **accuracy**.
+- **Performance Metrics**: Tracks metrics such as **average reward**, **success rate**, and **learning speed** to evaluate and compare agent performance.
 
-   ```bash
-   git clone https://github.com/M1rai76/Reinforcement-Learning.git
-```markdown
-## Navigate into the project directory:
+---
 
-```bash
-cd Reinforcement-Learning
-```
+## Environment
 
-## Install the required dependencies:
+The environment is a simple grid-based setting designed for reinforcement learning experiments. It features:
+- **Grid Layout**: Agent navigates the grid to reach a goal.
+- **Actions**: The agent has four possible actions—up, down, left, and right.
+- **Reward System**: The agent receives rewards or penalties based on its actions and goal achievement.
 
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-### Running the Experiments
-
-#### Q-learning with Teacher Advice:
-
-Run Task 3 to train the Q-learning agent with teacher advice, save the results, and visualize the metrics.
-
-```python
-# Example command or script to execute Task 3
-```
-
-#### SARSA with Teacher Advice:
-
-Run Task 4 to train the SARSA agent with teacher advice, save the results, and visualize the metrics.
-
-```python
-# Example command or script to execute Task 4
-```
-
-### Performance Comparison:
-
-Use the provided `utils.py` function `plot_comparison_with_baseline()` to compare the performance of agents trained with and without teacher advice.
-
-```python
-# Example usage of plot_comparison_with_baseline
-```
-
-### Running Custom Experiments
-
-Adjust parameters like availability and accuracy in the experiment scripts to observe the effect of different levels of teacher advice on learning outcomes.
+---
 
 ## Project Structure
 
-```bash
-Reinforcement-Learning/
-├── data/                         # Data files for experiments
-├── utils.py                      # Utility functions for plotting and analysis
-├── q_learning_agent.py           # Q-learning agent implementation
-├── sarsa_agent.py                # SARSA agent implementation
-├── static_grid_env.py            # Custom environment for the agents
-├── README.md                     # Project documentation
-└── requirements.txt              # Dependency file
+The project structure is organized as follows:
+
+```plaintext
+Reinforcement-Learning
+│
+├── src
+│   ├── environment.py       # Environment code for the grid-based environment
+│   ├── q_learning_agent.py  # Q-learning agent implementation
+│   ├── sarsa_agent.py       # SARSA agent implementation
+│   ├── teacher_advice.py    # Functions for teacher advice logic
+│   ├── utils.py             # Helper functions including plotting and result comparison
+│   ├── main.py              # Script to execute all tasks
+│
+├── tasks
+│   ├── task1_q_learning.py  # Script for Task 1: Q-learning without teacher advice
+│   ├── task2_sarsa.py       # Script for Task 2: SARSA without teacher advice
+│   ├── task3_q_learning_teacher.py  # Script for Task 3: Q-learning with teacher advice
+│   ├── task4_sarsa_teacher.py       # Script for Task 4: SARSA with teacher advice
+│   ├── task5_comparison.py  # Script for Task 5: Comparing results with baseline
+│
+├── data
+│   ├── task3_q_learning.csv    # Results for Q-learning with teacher advice
+│   ├── task4_sarsa.csv         # Results for SARSA with teacher advice
+│
+└── README.md                   # Project documentation
 ```
 
-## Experiments
+---
 
-### Baseline Performance:
+## Installation
 
-- Task 1: Q-learning without teacher advice.
-- Task 2: SARSA without teacher advice.
+1. Clone the repository:
 
-### Teacher-Guided Learning:
+   ```bash
+   git clone https://github.com/M1rai76/Reinforcement-Learning.git
+   ```
 
-- Task 3: Q-learning with teacher advice. Evaluate the agent using metrics like average reward, success rate, and learning speed at different levels of teacher availability and accuracy.
-- Task 4: SARSA with teacher advice. Similar to Task 3 but with SARSA as the learning algorithm.
+2. Navigate into the project directory:
 
-### Comparative Analysis:
+   ```bash
+   cd Reinforcement-Learning
+   ```
 
-- Task 5: Load and compare the results of tasks with teacher advice and without teacher advice. Visualize the effect of teacher guidance using comparative plots.
+3. Install the required dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
+
+## Usage
+
+### Tasks Breakdown
+
+The project is broken down into five tasks, each focusing on different aspects of reinforcement learning:
+
+- **Task 1**: Implement and train a Q-learning agent without teacher advice.
+- **Task 2**: Implement and train a SARSA agent without teacher advice.
+- **Task 3**: Train a Q-learning agent with teacher advice, varying availability and accuracy levels.
+- **Task 4**: Train a SARSA agent with teacher advice, similar to Task 3.
+- **Task 5**: Compare the performance of agents trained with teacher advice against the baseline agents.
+
+### Running the Code
+
+Run each task separately or run `main.py` to execute all tasks in sequence:
+
+```bash
+python main.py
+```
+
+Alternatively, run individual tasks:
+
+```bash
+# Task 1: Q-learning without teacher advice
+python tasks/task1_q_learning.py
+
+# Task 2: SARSA without teacher advice
+python tasks/task2_sarsa.py
+
+# Task 3: Q-learning with teacher advice
+python tasks/task3_q_learning_teacher.py
+
+# Task 4: SARSA with teacher advice
+python tasks/task4_sarsa_teacher.py
+
+# Task 5: Comparison with baseline
+python tasks/task5_comparison.py
+```
+
+### Parameters
+
+Key parameters and their purpose:
+
+- **alpha**: Learning rate, controls how much new information overrides old information.
+- **gamma**: Discount factor, determines the importance of future rewards.
+- **epsilon**: Exploration rate in epsilon-greedy policy, used in Q-learning and SARSA.
+- **availability**: Probability of teacher advice being available.
+- **accuracy**: Probability of teacher advice being correct.
+
+These parameters can be adjusted in each task's script.
+
+---
 
 ## Results
 
-The experiments show the influence of teacher availability and accuracy on agent performance. Key insights include:
+The results are saved as CSV files (`task3_q_learning.csv` and `task4_sarsa.csv`) and contain the following columns:
 
-- Higher availability and accuracy lead to faster learning and improved performance.
-- Comparative plots reveal the impact of teacher advice on average reward, success rate, and learning speed.
-- Heatmaps illustrate the distribution of average reward across different configurations of availability and accuracy.
+- **Availability**: Level of teacher availability.
+- **Accuracy**: Level of teacher accuracy.
+- **Success Rate (%)**: Success rate of the agent in reaching the goal.
+- **Avg Reward**: Average reward per episode.
+- **Avg Learning Speed**: Average speed of learning.
 
-## Contributing
+### Plotting Results
 
-Contributions are welcome! If you'd like to contribute, please fork the repository and make changes as you like. Pull requests are warmly welcomed.
+The `utils.py` file contains functions for plotting. The key function is `plot_comparison_with_baseline`, which compares the agent’s performance with and without teacher advice.
 
-1. Fork the Project
-2. Create your Feature Branch (git checkout -b feature/YourFeature)
-3. Commit your Changes (git commit -m 'Add some feature')
-4. Push to the Branch (git push origin feature/YourFeature)
-5. Open a Pull Request
+```python
+# Sample usage to plot comparison
+from utils import plot_comparison_with_baseline
+
+plot_comparison_with_baseline(
+    availability=0.8,
+    df_learning=df_q_learning_teacher,
+    baseline_learning=(50, 80, 30),
+    accuracies=[0.7, 0.8, 0.9],
+    algorithm="Q-learning"
+)
+```
+
+---
 
 ## License
 
-Distributed under the MIT License. See LICENSE for more information.
-```
+This project is licensed under the MIT License. See the `LICENSE` file for details.
+
+--- 
+
+This `README.md` provides an overview, installation guide, usage instructions, and details on the results and structure of the project. Feel free to expand sections or add specific information as necessary for your project requirements.
