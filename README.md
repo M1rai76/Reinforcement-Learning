@@ -31,45 +31,54 @@ Reinforcement learning (RL) enables an agent to learn optimal behavior through i
 
    ```bash
    git clone https://github.com/M1rai76/Reinforcement-Learning.git
-Navigate into the project directory:
+```markdown
+## Navigate into the project directory:
 
-bash
-Copy code
+```bash
 cd Reinforcement-Learning
-Install the required dependencies:
+```
 
-bash
-Copy code
+## Install the required dependencies:
+
+```bash
 pip install -r requirements.txt
-Usage
-Running the Experiments
-Q-learning with Teacher Advice:
+```
+
+## Usage
+
+### Running the Experiments
+
+#### Q-learning with Teacher Advice:
 
 Run Task 3 to train the Q-learning agent with teacher advice, save the results, and visualize the metrics.
 
-python
-Copy code
+```python
 # Example command or script to execute Task 3
-SARSA with Teacher Advice:
+```
+
+#### SARSA with Teacher Advice:
 
 Run Task 4 to train the SARSA agent with teacher advice, save the results, and visualize the metrics.
 
-python
-Copy code
+```python
 # Example command or script to execute Task 4
-Performance Comparison:
+```
 
-Use the provided utils.py function plot_comparison_with_baseline() to compare the performance of agents trained with and without teacher advice.
+### Performance Comparison:
 
-python
-Copy code
+Use the provided `utils.py` function `plot_comparison_with_baseline()` to compare the performance of agents trained with and without teacher advice.
+
+```python
 # Example usage of plot_comparison_with_baseline
-Running Custom Experiments
+```
+
+### Running Custom Experiments
+
 Adjust parameters like availability and accuracy in the experiment scripts to observe the effect of different levels of teacher advice on learning outcomes.
 
-Project Structure
-bash
-Copy code
+## Project Structure
+
+```bash
 Reinforcement-Learning/
 ├── data/                         # Data files for experiments
 ├── utils.py                      # Utility functions for plotting and analysis
@@ -78,31 +87,43 @@ Reinforcement-Learning/
 ├── static_grid_env.py            # Custom environment for the agents
 ├── README.md                     # Project documentation
 └── requirements.txt              # Dependency file
-Experiments
-Baseline Performance:
+```
 
-Task 1: Q-learning without teacher advice.
-Task 2: SARSA without teacher advice.
-Teacher-Guided Learning:
+## Experiments
 
-Task 3: Q-learning with teacher advice. Evaluate the agent using metrics like average reward, success rate, and learning speed at different levels of teacher availability and accuracy.
-Task 4: SARSA with teacher advice. Similar to Task 3 but with SARSA as the learning algorithm.
-Comparative Analysis:
+### Baseline Performance:
 
-Task 5: Load and compare the results of tasks with teacher advice and without teacher advice. Visualize the effect of teacher guidance using comparative plots.
-Results
+- Task 1: Q-learning without teacher advice.
+- Task 2: SARSA without teacher advice.
+
+### Teacher-Guided Learning:
+
+- Task 3: Q-learning with teacher advice. Evaluate the agent using metrics like average reward, success rate, and learning speed at different levels of teacher availability and accuracy.
+- Task 4: SARSA with teacher advice. Similar to Task 3 but with SARSA as the learning algorithm.
+
+### Comparative Analysis:
+
+- Task 5: Load and compare the results of tasks with teacher advice and without teacher advice. Visualize the effect of teacher guidance using comparative plots.
+
+## Results
+
 The experiments show the influence of teacher availability and accuracy on agent performance. Key insights include:
 
-Higher availability and accuracy lead to faster learning and improved performance.
-Comparative plots reveal the impact of teacher advice on average reward, success rate, and learning speed.
-Heatmaps illustrate the distribution of average reward across different configurations of availability and accuracy.
-Contributing
+- Higher availability and accuracy lead to faster learning and improved performance.
+- Comparative plots reveal the impact of teacher advice on average reward, success rate, and learning speed.
+- Heatmaps illustrate the distribution of average reward across different configurations of availability and accuracy.
+
+## Contributing
+
 Contributions are welcome! If you'd like to contribute, please fork the repository and make changes as you like. Pull requests are warmly welcomed.
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/YourFeature)
-Commit your Changes (git commit -m 'Add some feature')
-Push to the Branch (git push origin feature/YourFeature)
-Open a Pull Request
-License
+1. Fork the Project
+2. Create your Feature Branch (git checkout -b feature/YourFeature)
+3. Commit your Changes (git commit -m 'Add some feature')
+4. Push to the Branch (git push origin feature/YourFeature)
+5. Open a Pull Request
+
+## License
+
 Distributed under the MIT License. See LICENSE for more information.
+```
