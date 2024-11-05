@@ -184,5 +184,3 @@ plot_comparison_with_baseline(
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 --- 
-
-This `README.md` provides an overview, installation guide, usage instructions, and details on the results and structure of the project. Feel free to expand sections or add specific information as necessary for your project requirements.
